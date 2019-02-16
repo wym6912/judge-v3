@@ -11,7 +11,7 @@ export const lang =  {
         // and put it to your sandbox.
         executable: "/usr/bin/clang++-7",
         parameters: ["clang++-7", sourcePath, "-o", `${outputDirectory}/a.out`, "-std=c++11", "-O2", "-fdiagnostics-color=always", "-DONLINE_JUDGE", "-mx32"],
-        time: 5000,
+        time: 15000,
         memory: 1024 * 1024 * 1024 * 2,
         process: 10,
         // This is just a redirection. You can simply ignore this

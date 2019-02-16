@@ -11,7 +11,7 @@ export const lang = {
         // and put it to your sandbox.
 	executable: "/usr/bin/compile-c-noilinux",
 	parameters: ["compile-c-noilinux", sourcePath, "-o", `${outputDirectory}/a.out`, "-O2", "-DONLINE_JUDGE"],
-        time: 5000,
+        time: 15000,
         memory: 1024 * 1024 * 1024 * 2,
         process: 10,
         // This is just a redirection. You can simply ignore this
