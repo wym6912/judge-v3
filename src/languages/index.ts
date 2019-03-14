@@ -52,8 +52,7 @@ export const languages: Language[] = [
     require('./vala'),
     require('./lua'),
     require('./luajit'),
-    require('./ocaml'),
-    require('./scala')
+    require('./ocaml')
     
 ].map(f => f.lang);
 
