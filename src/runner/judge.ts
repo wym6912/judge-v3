@@ -53,7 +53,7 @@ async function runSpj(spjBinDir: string, spjLanguage: Language): Promise<SpjResu
     if (spjRunResult.result.status !== SandboxStatus.OK) {
         return {
             status: TestcaseResultType.JudgementFailed,
-            message: `Special Judge ${SandboxStatus[spjRunResult.result.status]} encouneted.`,
+            message: `Special Judge ${SandboxStatus[spjRunResult.result.status]} encountered.`,
             score: 0
         };
     } else {
@@ -208,7 +208,7 @@ export async function judgeStandard(task: StandardRunTask)
         try {
             await fse.move(pathLib.join(workingDir, outputFileName), pathLib.join(spjWorkingDir, 'user_out'));
         } catch (e) {
-            if (e.code === 'ENOENT' && runResult.result.status === SandboxStatus.OK) {
+            if (e.code === 'ENOENT' && runResult.result.status === SandboxStatus.OK && !runResult.outputLimitExceeded) {
                 status = TestcaseResultType.FileError;
             }
         }
