@@ -10,10 +10,10 @@ export const lang =  {
         // write a shell script or some other stuff, 
         // and put it to your sandbox.
         executable: "/usr/bin/compile-script",
-        parameters: ["compile-script", sourcePath, outputDirectory, "pypy -m py_compile a.py"],
+        parameters: ["compile-script", sourcePath, outputDirectory, "python2 -m py_compile a.py"],
         time: 5000,
         memory: 1024 * 1024 * 1024,
-        process: 10,
+        process: 90,
         // This is just a redirection. You can simply ignore this
         // if you can specify custom location for message output
         // in the parameter of the compiler, or have redirected the compilation 
@@ -33,11 +33,11 @@ export const lang =  {
         stdoutFile = null,
         stderrFile = null
     ) => ({
-        executable: "/usr/bin/pypy",
-        parameters: ["pypy", `${binaryDirectory}/a.py`],
+        executable: "/usr/bin/python2.7",
+        parameters: ["python2.7", `${binaryDirectory}/a.py`],
         time: time,
         memory: memory,
-        process: 1,
+        process: 8,
         stdin: stdinFile,
         stdout: stdoutFile,
         stderr: stderrFile,
